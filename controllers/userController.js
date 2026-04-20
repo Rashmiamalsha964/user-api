@@ -4,18 +4,22 @@ const User = require("../models/User");
 
 exports.createUser = async (req, res) => {
   try {
-    if (!req.body.name || !req.body.email) {
-      return res.status(400).json({ message: "Empty data not allowed" });
+    console.log("BODY:", req.body); 
+
+    const { name, email, password } = req.body;
+
+    if (!name || !email || !password) {
+      return res.status(400).json({ message: "Missing fields" });
     }
 
-    const user = await User.create(req.body);
+    const user = await User.create({ name, email, password });
 
     res.status(201).json(user);
   } catch (err) {
-    res.status(500).json({ message: "Server error" });
+    console.log(err);
+    res.status(500).json({ message: err.message });
   }
 };
-
 exports.getUsers = async (req, res) => {
   try {
     const users = await User.find();
