@@ -30,7 +30,7 @@ This project follows a **Controller-based architecture**:
 ### 2. Create .env file
 PORT=5000
 
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=mongodb+srv://2021sp086_db_user:XTb3hlVOMxE2jn3U@cluster0.0f0o7zw.mongodb.net/?appName=Cluster0
 
 JWT_SECRET=your_secret_key
 
