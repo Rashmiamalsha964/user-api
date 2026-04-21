@@ -30,9 +30,9 @@ This project follows a **Controller-based architecture**:
 ### 2. Create .env file
 PORT=5000
 
-MONGO_URI=mongodb+srv://2021sp086_db_user:XTb3hlVOMxE2jn3U@cluster0.0f0o7zw.mongodb.net/?appName=Cluster0
+MONGO_URI=mongodb+srv://2021sp086_db_user:ApiUseDb@cluster0.0f0o7zw.mongodb.net/?appName=Cluster0
 
-JWT_SECRET=your_secret_key
+JWT_SECRET=9f3c1b7a8d6f4e2c9a1b7e5d8f3c0a9b
 
 ### 3. Run Server
 - node server.js
